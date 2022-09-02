@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15입력폼.html</title>
+</head>
+<body>
+    <h1>Form 양식</h1>
+    <p>
+        form 태그는 사용자가 입력한 값들을 웹서버에 전달하고자 할 때 사용한다.<br>
+        form 태그 안에는 다양한 입력 양식들이 올 수 있는데, 이들을  form control 이라고 한다. <br>
+    </p>
+    <hr color="red">
+    <!-- form태그의 속성
+	1) name, id : 폼을 식별할 수 있는 이름
+	2) action : 폼 양식을 처리해줄 서버 페이지를 기술한다.
+	3) method : 데이터 전송방식을 기술한다. 주로 get아니면 post를 기술한다.
+			get방식은 간단한 데이터 전송시 사용한다.=> 사용자가 입력한 값이 url부분에 노출됨
+			post방식은 대용량의 데이터 전송시 사용 => 데이터가 노출되지 않는다.
+
+        method="get"의 경우,
+        => http://127.0.0.1:5500/join?userid=nottinghill&pwd=1234
+        get 방식 요청일 때는 입력 데이터를 query string 으로 url 부분에 포함시켜 전송함.
+        (위 url 중 ?userid... 부분을 query string 이라고 함.)
+        method="post"의 경우
+        => http://127.0.0.1:5500/join
+
+    4) enctype : 인코딩 방식을 지정한다.
+				파일 업로드시는 multipart/form-data를 지정해야 한다.
+                application/x-www-form-urlencoded==>디폴트 (파일첨부시 파일명만 전송됨)
+        http://localhost:8080/join.jsp?name=test&userid=aaa&pwd=1111&photo=&gender=Male
+		&hobby=sports&hobby=movie
+
+	-->
+    <form name="frm" id="frm" action="join" method="get" 
+    enctype="application/x-www-form-urlencoded">
+        ID : <input type="text" name="userid"><br>
+        PASSWORD : <input type="password" name="pwd"><br>
+        PHOTO : <input type="file" name="photo"><br>
+        GENDER : <label><input type="radio" name="gender" value="Male" checked> MALE</label>
+                 <label><input type="radio" name="gender" value="Female"> FEMALE</label>
+                 <br>
+                 <!-- 단일선택 : radio 이 때 동일한 name일 경우 그 중 1개만 선택됨.
+                      다중선택 : checkbox
+                 -->
+        HOBBY : <label>
+                    <input type="checkbox" name="Hobby" value="Sports" checked>Workout
+                </label> 
+                <label>
+                    <input type="checkbox" name="Hobby" value="Reading">Reading Books
+                </label> <label>
+                    <input type="checkbox" name="Hobby" value="Movie">Watching Movies
+                </label> <br>
+        DROP DOWN LIST : 
+        <select name="job" id="">
+            <option value="Developer" selected>Developer</option>
+            <option value="Designer">Designer</option>
+            <option value="Manager">Manager</option>
+        </select> <br>
+        <!-- select : 단위선택 (default)
+            multiple 속성을 주면 다중선택이 가능하다
+            size 속성을 주면 펼친 형태가 된다. 
+        -->
+        LANGUAGE : 
+        <select name="language" id="language" size="4" multiple>
+            <option value="">::LANGUAGE::</option>
+            <option value="Java">Java</option>
+            <option value="HTML">HTML</option>
+            <option value="SQL">SQL</option>
+        </select><br>
+        BIO : 
+        <textarea name="bio" cols="70" rows="5"></textarea><br>
+        HIDDEN FIELD : 
+        <input type="hidden" name="secret" value="TopSecret"><br>
+        <input type="submit" value="Register">
+        <!-- submit 버튼은 form 태그 안에 넣으면 서버페이지로 데이터를 전송함. -->
+        <input type="reset" value="rewrite">
+        <!-- reset : 입력값들을 초기화한다. -->
+        <input type="button" value="normal" onclick="alert('Nice to meet you')">
+    </form>
+</body>
+</html>
+<!-- 15입력폼.html -->

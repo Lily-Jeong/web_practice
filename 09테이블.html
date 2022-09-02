@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09테이블.html</title>
+</head>
+<body>
+    <h1>Table Tag (3 rows 2 columns)</h1>
+    <!-- tr (table row) : 행 태그
+         td (table data) : 열 태그 
+    -->
+    <table border="1" bordercolor="navy" 
+    bgcolor="orange" cellspacing="30px"
+    cellpadding="20" align="center"
+    background="images/Screen Shot 2022-08-03 at 2.56.05 PM.png"
+    width="400px" height="300px"> 
+        <!-- 1행 -->
+        <tr>
+            <td>1 row 1 column</td>
+            <td>1 row 2 column</td>
+        </tr>
+        <!-- 2행 -->
+        <tr>
+            <td>2 row 1 column</td>
+            <td>2 row 2 column</td>
+        </tr>
+        <!-- 3행 -->
+        <tr>
+            <td>3 row 1 column</td>
+            <td>3 row 2 column</td>
+        </tr>
+    </table>
+    <hr>
+    <!--  3행 4열 -->
+    <table border="1" width="80%" height="200px" align="center">
+        <thead>
+            <tr bgcolor="#B4D3B2">
+                <th width="10%">ID</th>
+                <th width="20%">Name</th>
+                <th width="20%">Cell</th>
+                <th width="50%">Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td bgcolor="hotpink" style="color:#B4D3B2">Tom Cruise</td>
+                <td>010-1111-1111</td>
+                <td>LA, California</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td background="images/IMG_1923.jpg" style="color:brown">Henry Caville</td>
+                <td>010-1111-2222</td>
+                <td>London</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Chris Pratt</td>
+                <td>010-1111-3333</td>
+                <td>Malibu, California</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <caption>Member Address</caption>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- 24상태선택자.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24상태선택자.html</title>
+    <style>
+        body{
+            font-size: 1.6em;
+            font-family: sans-serif;
+            padding: 1em;
+        }
+        /* 상태선택자 
+            태그명: 특성 { }
+        */
+        /* 처음링크 : 방문전 */
+        a:link{
+            text-decoration: none;
+            color: orange;
+        }
+        /* 방문 후 */
+        a:visited{
+            text-decoration: none;
+            color: darkblue;
+        }
+        /* 마우스 클릭 시 */
+        a:active{
+            background-color: cornflowerblue;
+        }
+        /* 마우스 오버시 */
+        a:hover{
+            color: indianred;
+            font-size: 2em;
+            cursor: wait;
+        }
+        /* 클래스가 google인 a요소를 선택해서 배경색을 lime으로 주세요 */
+        /* 클래스가 google가 아닌 a요소를 선택해서 배경색을 다른 색 주기
+            요소 : not(배제할 요소)        
+        */
+        a.google{
+            background-color: lime;
+        }
+        a:not(.google) { 
+            background-color: hotpink;
+        }
+        button:disabled{
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>상태선택자 - Hyperlink Style</h1>
+    <a href="http://www.naver.com">NAVER</a><p></p>
+    <a class="google" href="http://www.google.com">Google</a><p></p>
+    <a href="http://www.daum.net">Daum</a><p></p>
+    <a href="http://www.nate.com">nate</a><p></p>
+    <a href="http://www.yahoo.com">Yahoo</a><p></p>
+
+    일반 텍스트
+    <div>헤드라인 텍스트</div>
+    <button>Activate Button</button>
+    <button disabled>Deactivate Button</button>
+</body>
+</html>

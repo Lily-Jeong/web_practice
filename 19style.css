@@ -1,0 +1,21 @@
+/* 19style.css */
+@charset "UTF-8";
+body{
+    color: navy;
+    font-size: 1.2em;
+    /* 1em : 16px 
+        1.2em : 16px * 1.2
+    */
+}
+/* div 정의
+    서체 : 궁서체
+    글자색 : 알아서
+    바깥여백 : 20px
+*/
+div{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkgreen;
+    margin: 20px;
+    background-color: lightpink;
+    padding: 1em;
+}

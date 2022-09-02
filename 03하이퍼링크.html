@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<!-- 03하이퍼링크.html -->
+<html>
+    <head>
+        <title>03하이퍼링크.html</title>
+    </head>
+    <body>
+        <h1> Add HyperLink to a Text </h1>
+        <a href="https://www.naver.com">NAVER</a>
+        <a href="https://www.google.com">Google</a>
+        <a href="https://www.daum.net" target="_blank">Daum</a>
+        <hr color="green">
+        <a href="01HTML시작.html" target="_blank">My Document01</a><br>
+        <a href="02문자열형태.html" target="_blank">My Document02</a><br>
+        <!-- 상대경로 방식 : 현재 작성한 파일이 있는 곳을 기준으로 접근하는 방식.
+            /Users/lilyjeong/Documents/web/sample
+                +--- 03하이퍼링크.html
+                . : 현재 디렉토리를 의미
+                .. : 현재보다 한 단계 상위 디렉토리를 의미.
+                ../../ : 현재보다 두 단계 상위 디렉토리를 의미.
+
+        -->
+        <a href="sample/test.html">Test Document</a><br>
+        <hr>
+        <!-- 절대경로 방식 -->
+        <a href="file:///Users/lilyjeong/Documents/web/sample/test.html" target="_blank">Test.html Link</a>
+    </body>
+</html>

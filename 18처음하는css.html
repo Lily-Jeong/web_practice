@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18처음하는css.html</title>
+    <style type="text/css">
+        /* 선택자 {속성명:속성값; ... } */
+        * {
+            color: tomato;
+        }
+        body{
+            padding: 50px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        /* b 태그를 선택해서
+            - 글자색 : blue
+            - 글자크기 : 32px
+            - 배경색 :  beige   
+        */
+        b {
+            color:darkblue;
+            font-size: 32px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        [1] style태그로 파일 내부에 정의하는 방법
+        [2] 외부파일에 정의한 뒤 참조하는 방법=> link태그
+        [3] 외부파일을 import하는 방법 => @import
+        [4] 인라인 스타일로 정의하는 방법
+     -->
+    <div>
+        Hello.<br>
+        Let's learn <b>CSS3.0</b>
+        <p>
+            Improved version of HTML.
+            <b>Hello CSS 3.0</b>
+        </p>
+    </div>
+</body>
+</html>

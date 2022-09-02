@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34레이어.html</title>
+	<style>
+		body{
+			padding: 20px;
+		}
+		div:not(#root){
+			/* background-color: aqua; */
+			width: 100px;
+			height: 100px;
+		}
+		.z-1{
+			background-color: cadetblue;
+			position: absolute; /* 부모 요소를 기준으로 좌표를 잡는다 */
+			left: 50px; /* x좌표 */
+			top: 50px; /* y좌표 */
+			z-index: 9; /* 인덱스 값이 클 수록 레이어 계층의 위로 올라간다.*/
+		}
+		.z-2{
+			background-color: darkgoldenrod;
+			position: absolute; /* 부모 요소를 기준으로 좌표를 잡는다 */
+			left: 80px; /* x좌표 */
+			top: 80px; /* y좌표 */
+			z-index: 8;
+		}
+		.z-3{
+			background-color: darkslategrey;
+			position: absolute; /* 부모 요소를 기준으로 좌표를 잡는다 */
+			left: 110px; /* x좌표 */
+			top: 110px; /* y좌표 */
+			z-index: 7 ;
+		}
+		.z-4{
+			background-color: #ffffcc;
+			position: absolute; /* 부모 요소를 기준으로 좌표를 잡는다 */
+			left: 140px; /* x좌표 */
+			top: 140px; /* y좌표 */
+		}
+	</style>
+	
+</head>
+<body>
+    <h1>레이어를 구성해보자.</h1>
+  <div id="root" style="position:relative">
+	  <div id="" class="z-1">
+		 레이어: z-1
+	  </div>
+	  <div id="" class="z-2">
+		 레이어: z-2
+	  </div>
+	  <div id="" class="z-3">
+		 레이어: z-3
+	  </div>
+	  <div id="" class="z-4">
+		 레이어: z-4
+	  </div>
+  </div>
+</body>
+</html>

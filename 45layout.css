@@ -1,0 +1,116 @@
+@charset "UTF-8"; /* 한글 주석 달 수 있게 해줌.*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: rebeccapurple;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#wrap{
+    width:90%;
+    margin: 0 auto;
+    /* background-color: bisque; */
+    max-width: 1024px;
+    height: auto;
+}
+#clear{
+    clear: both; /* => float 설정 해제 */
+}
+/* header------------------------------------- */
+header{
+    border: 1px solid silver;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+header img{
+    width: 95%;
+    text-align: center;
+}
+nav{
+    padding: 5px;
+    background-color: lightgrey;
+    height: 30px;
+    border-radius: 5px;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    float: left;
+    padding: 0 5px 0 0;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 2px 20px 2px 20px;
+    color: rgb(50, 50, 50);
+}
+nav ul li a:hover{
+    background-color: rgb(102, 153, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+/* article------------------------------------ */
+article {
+    height: 500px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin: 5px 0 5px 0;
+    padding: 10px;
+    width: 70%;
+    float: left;
+}
+article section{
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 48.5%;
+    float: left;
+}
+/* aside-------------------------------------- */
+aside{
+    height: 500px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin: 5px 0 5px 0;
+    padding: 10px;
+    width: 29.7%;
+    float: right;
+}
+aside nav{
+    background: none;
+    border: none;
+}
+aside nav ul{
+    list-style: none;
+}
+aside nav ul li{
+    padding: 0 5px ;
+}
+aside nav ul li a{
+    padding: 5px 0;
+    width: 170px;
+}
+aside nav ul li a:hover{
+    background-color: transparent;
+    color: navy;
+    font-weight: bold;
+}
+/* footer------------------------------------- */
+footer{
+    background-color: lightblue;
+    border: 1px solid silver;
+    height: 50px;
+    line-height: 30px;
+    font-size: 0.8em;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
